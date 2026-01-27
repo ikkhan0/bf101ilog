@@ -1,0 +1,56 @@
+import { withAuth } from 'next-auth/middleware';
+import { NextResponse } from 'next/server';
+
+export default withAuth(
+    function middleware(req) {
+        const token = req.nextauth.token;
+        const path = req.nextUrl.pathname;
+
+        // Redirect to appropriate dashboard based on role
+        if (path === '/dashboard') {
+            if (token?.role === 'admin') {
+                return NextResponse.redirect(new URL('/admin', req.url));
+            } else if (token?.role === 'carrier') {
+                return NextResponse.redirect(new URL('/carrier-dashboard', req.url));
+            } else if (token?.role === 'shipper') {
+                return NextResponse.redirect(new URL('/shipper-dashboard', req.url));
+            }
+        }
+
+        // Protect admin routes
+        if (path.startsWith('/admin') && token?.role !== 'admin') {
+            return NextResponse.redirect(new URL('/login', req.url));
+        }
+
+        // Protect carrier routes
+        if (path.startsWith('/carrier-dashboard') && token?.role !== 'carrier') {
+            return NextResponse.redirect(new URL('/login', req.url));
+        }
+
+        // Protect shipper routes
+        if (path.startsWith('/shipper-dashboard') && token?.role !== 'shipper') {
+            return NextResponse.redirect(new URL('/login', req.url));
+        }
+
+        return NextResponse.next();
+    },
+    {
+        callbacks: {
+            authorized: ({ token, req }) => {
+                const path = req.nextUrl.pathname;
+
+                // Public routes
+                if (path === '/login' || path.startsWith('/portal/') || !path.startsWith('/admin') && !path.startsWith('/carrier-dashboard') && !path.startsWith('/shipper-dashboard') && path !== '/dashboard') {
+                    return true;
+                }
+
+                // Protected routes require authentication
+                return !!token;
+            },
+        },
+    }
+);
+
+export const config = {
+    matcher: ['/admin/:path*', '/carrier-dashboard/:path*', '/shipper-dashboard/:path*', '/dashboard'],
+};
