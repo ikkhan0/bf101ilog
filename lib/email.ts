@@ -3,9 +3,18 @@ import { getDatabase } from './mongodb';
 import { Notification, NotificationType } from '@/types';
 import { ObjectId } from 'mongodb';
 
-// Initialize Resend with a dummy key if missing to prevent build errors
-// The actual sending function checks for the key before sending
-const resend = new Resend(process.env.RESEND_API_KEY || 're_123456789');
+// Lazy initialization of Resend to prevent build errors when API key is missing
+// The Resend instance is created only when sendEmail is called
+let resendInstance: Resend | null = null;
+
+function getResendInstance(): Resend {
+  if (!resendInstance) {
+    // Initialize with actual key or a valid dummy key format
+    const apiKey = process.env.RESEND_API_KEY || 're_dummy_key_for_build';
+    resendInstance = new Resend(apiKey);
+  }
+  return resendInstance;
+}
 
 interface EmailOptions {
   to: string;
@@ -14,23 +23,29 @@ interface EmailOptions {
 }
 
 export async function sendEmail({ to, subject, html }: EmailOptions) {
-  if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 'your-resend-api-key-here') {
-    console.log('Email would be sent to:', to);
+  // Check if we have a valid API key before attempting to send
+  if (!process.env.RESEND_API_KEY ||
+    process.env.RESEND_API_KEY === 'your-resend-api-key-here' ||
+    process.env.RESEND_API_KEY === 're_dummy_key_for_build') {
+    console.log('📧 Email simulation mode (no valid API key configured)');
+    console.log('To:', to);
     console.log('Subject:', subject);
-    console.log('HTML:', html);
+    console.log('HTML preview:', html.substring(0, 200) + '...');
     return { success: true, message: 'Email simulated (no API key configured)' };
   }
 
   try {
+    const resend = getResendInstance();
     const data = await resend.emails.send({
       from: process.env.EMAIL_FROM || 'noreply@lfllogistics.com',
       to: [to],
       subject,
       html,
     });
+    console.log('✅ Email sent successfully to:', to);
     return { success: true, data };
   } catch (error) {
-    console.error('Email send error:', error);
+    console.error('❌ Email send error:', error);
     return { success: false, error };
   }
 }

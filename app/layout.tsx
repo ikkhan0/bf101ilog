@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
+// Force dynamic rendering to prevent build-time database queries
+// This ensures pages are rendered at request time, not build time
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'LFL Logistics - Reliable Freight Transport & Logistics',
   description: 'Longs Freight Load Logistics LLC - Professional trucking and logistics services across North America. FTL, LTL, and expedited shipping solutions.',
