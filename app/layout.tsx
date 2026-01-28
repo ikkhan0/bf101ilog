@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { Providers } from './providers';
 
 // Force dynamic rendering to prevent build-time database queries
 // This ensures pages are rendered at request time, not build time
@@ -25,7 +26,9 @@ export default function RootLayout({
         <link rel="stylesheet" href="/custom.css" />
       </head>
       <body className="antialiased">
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
