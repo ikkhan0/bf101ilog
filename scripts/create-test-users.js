@@ -2,7 +2,7 @@
 const { MongoClient } = require('mongodb');
 const bcrypt = require('bcryptjs');
 
-const MONGODB_URI = 'mongodb+srv://isofttechs786:isbDiploma@cluster0.fxmtb.mongodb.net/lfl-logistics?retryWrites=true&w=majority&appName=Cluster0';
+const MONGODB_URI = 'mongodb+srv://Imran:Imran321@cluster0.fxmtb.mongodb.net/lfllogistics?retryWrites=true&w=majority&appName=Cluster0';
 
 async function createTestUsers() {
     const client = new MongoClient(MONGODB_URI);
