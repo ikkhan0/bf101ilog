@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 
-// Max file size: 5MB (stays under MongoDB 16MB document limit after Base64 encoding)
-const MAX_FILE_SIZE = 5 * 1024 * 1024;
+// Max file size: 1MB (stays under MongoDB 16MB document limit after Base64 encoding)
+const MAX_FILE_SIZE = 1 * 1024 * 1024;
 
 // Allowed file types
 const ALLOWED_TYPES = [

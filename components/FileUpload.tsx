@@ -16,10 +16,10 @@ export function FileUpload({ label, currentFileUrl, onUploadSuccess, accept = '.
     const fileInputRef = useRef<HTMLInputElement>(null);
 
     const handleFileUpload = async (file: File) => {
-        // Validate file size (5MB max)
-        const MAX_SIZE = 5 * 1024 * 1024;
+        // Validate file size (1MB max)
+        const MAX_SIZE = 1 * 1024 * 1024;
         if (file.size > MAX_SIZE) {
-            setError('File size must be less than 5MB');
+            setError('File size must be less than 1MB');
             return;
         }
 
@@ -127,8 +127,8 @@ export function FileUpload({ label, currentFileUrl, onUploadSuccess, accept = '.
                     onDrop={handleDrop}
                     onClick={openFilePicker}
                     className={`border-2 border-dashed rounded-lg p-6 text-center cursor-pointer transition-colors ${dragActive
-                            ? 'border-blue-500 bg-blue-50'
-                            : 'border-gray-300 hover:border-gray-400 bg-white'
+                        ? 'border-blue-500 bg-blue-50'
+                        : 'border-gray-300 hover:border-gray-400 bg-white'
                         } ${uploading ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                     {uploading ? (
@@ -154,7 +154,7 @@ export function FileUpload({ label, currentFileUrl, onUploadSuccess, accept = '.
                             <p className="text-sm text-gray-600 mb-1">
                                 <span className="font-semibold text-blue-600">Click to upload</span> or drag and drop
                             </p>
-                            <p className="text-xs text-gray-500">PDF, JPG, PNG (max 5MB)</p>
+                            <p className="text-xs text-gray-500">PDF, JPG, PNG (max 1MB)</p>
                         </>
                     )}
                 </div>
