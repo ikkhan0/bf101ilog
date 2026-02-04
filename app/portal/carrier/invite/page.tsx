@@ -477,7 +477,7 @@ export default function CarrierInviteOnboardingPage() {
                 {/* Header */}
                 <div className="text-center mb-12">
                     <h1 className="text-4xl font-extrabold text-gray-900 mb-2">Carrier Registration</h1>
-                    <p className="text-gray-600">Join the LFL Logistics carrier network</p>
+                    <p className="text-gray-600">Join the BullyFashion101 LLC carrier network</p>
                     <div className="mt-2 inline-block px-4 py-1 bg-green-100 text-green-800 rounded-full text-sm font-bold">
                         Private Invite Registration
                     </div>

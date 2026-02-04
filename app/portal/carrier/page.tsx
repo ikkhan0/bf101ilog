@@ -483,7 +483,7 @@ export default function CarrierOnboardingPage() {
                 {/* Header */}
                 <div className="text-center mb-12">
                     <h1 className="text-4xl font-extrabold text-gray-900 mb-2">Carrier Registration</h1>
-                    <p className="text-gray-600">Join the LFL Logistics carrier network</p>
+                    <p className="text-gray-600">Join the BullyFashion101 LLC carrier network</p>
                 </div>
 
                 {/* Step Indicator */}

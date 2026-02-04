@@ -57,7 +57,7 @@ export default function LoginPage() {
             <div className="max-w-md w-full">
                 <div className="text-center mb-8">
                     <Link href="/" className="text-4xl font-bold text-white">
-                        LFL Logistics
+                        BullyFashion101 LLC
                     </Link>
                     <p className="text-blue-200 mt-2">Portal Login</p>
                 </div>

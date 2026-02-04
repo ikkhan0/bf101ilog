@@ -1,12 +1,14 @@
-# LFL Logistics Platform
+# BullyFashion101 LLC - Freight Logistics Platform
 
-Modern logistics company website with carrier and shipper portals.
+**TRANSPORTATION SOLUTIONS IN A BULLY FASHION** 🎖️
+
+Modern freight brokerage website with carrier and shipper portals. Military-owned, veteran-operated logistics excellence.
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 - Node.js 18+
-- MongoDB Atlas account (already configured)
+- MongoDB Atlas account (configured)
 
 ### Installation
 
@@ -27,7 +29,7 @@ node scripts/create-admin.js
 ```
 
 **Default Admin Credentials:**
-- Email: `admin@lfllogistics.com`
+- Email: `admin@ilogbf101.com`
 - Password: `admin123`
 
 ## 📁 Project Structure
@@ -37,20 +39,21 @@ node scripts/create-admin.js
 │   ├── admin/              # Admin dashboard
 │   ├── carrier-dashboard/  # Carrier portal
 │   ├── shipper-dashboard/  # Shipper portal
-│   ├── portal/            # Onboarding pages
-│   ├── api/               # API routes
-│   └── ...                # Public pages
-├── lib/                   # Utilities (MongoDB, Email, AI)
-├── types/                 # TypeScript types
-└── public/                # Static assets
+│   ├── portal/             # Onboarding pages
+│   ├── api/                # API routes
+│   └── ...                 # Public pages
+├── lib/                    # Utilities (MongoDB, Email, AI)
+├── types/                  # TypeScript types
+└── public/                 # Static assets
 ```
 
 ## 🔑 Features
 
-###  Public Website
-- Homepage with services
-- About & contact pages
-- Responsive design
+### 🌐 Public Website
+- Homepage with military-owned branding
+- Services (Dry Van, Flatbed, Hazmat, Food & Perishables)
+- About & Contact pages
+- Responsive patriotic design
 
 ### 🚚 Carrier Portal
 - Multi-step onboarding
@@ -80,10 +83,9 @@ node scripts/create-admin.js
 
 ### Public
 - `/` - Homepage
-- `/services` - Services
-- `/about` - About us
-- `/contact` - Contact
-- `/login` - Login page
+- `/services` - Freight Brokerage Services
+- `/about` - Company & Leadership
+- `/contact` - Contact Information
 
 ### Portals
 - `/portal/carrier` - Carrier onboarding
@@ -99,8 +101,8 @@ node scripts/create-admin.js
 Update `.env.local`:
 
 ```env
-MONGODB_URI=mongodb+srv://imran:Imran963@cluster0...
-NEXTAUTH_SECRET=<already configured>
+MONGODB_URI=mongodb+srv://imran:Imran321@cluster0.rpbmt5u.mongodb.net/bf101ilog?retryWrites=true&w=majority&appName=Cluster0
+NEXTAUTH_SECRET=bf101-bullyfashion-secret-key-change-in-production-32-characters-min
 NEXTAUTH_URL=http://localhost:3000
 
 # Optional: For AI analysis
@@ -108,7 +110,7 @@ GEMINI_API_KEY=your-key-here
 
 # Optional: For email notifications
 RESEND_API_KEY=your-key-here
-ADMIN_EMAIL=LFLL@LFLLogistics.com
+ADMIN_EMAIL=EM@ilogbf101.com
 ```
 
 ## 🚀 Deployment
@@ -130,21 +132,50 @@ npm start
 
 ## 📞 Contact Information
 
-**LFL Logistics**
-- Phone: (704) 918-5201
-- Email: LFLL@LFLLogistics.com
-- Address: 4844 Asherton PL NW, Concord, NC 28027
+**Erv Moore, Owner**  
+BullyFashion101 LLC  
+Phone: (326) 467-2949  
+Email: EM@ilogbf101.com
+
+*"Good Brokers don't allow good truckers nor good customers to be Bullied."*
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Next.js 15 with App Router
+- **Framework:** Next.js 16 with App Router
 - **Language:** TypeScript
-- **Styling:** Tailwind CSS
+- **Styling:** Tailwind CSS (Patriotic Red, White, and Blue Theme)
 - **Database:** MongoDB Atlas
 - **Authentication:** NextAuth.js
 - **Email:** Resend (optional)
 - **AI:** Google Gemini (optional)
 
+## 🎨 Branding
+
+- **Theme:** Patriotic American - Red, White, and Blue
+- **Primary Color:** Navy Blue (#1E3A8A)
+- **Secondary Color:** Patriotic Red (#DC2626)
+- **Accent Color:** Light Blue (#3B82F6)
+- **Differentiator:** 🎖️ MILITARY OWNED & OPERATED
+
+## 📝 Services Offered
+
+- Dry Van Freight Brokerage
+- Flatbed Freight Brokerage
+- Hazardous Materials Transportation
+- Food & Perishables Logistics
+- Industrial & Manufacturing Freight
+- Expedited Shipping
+- Supply Chain Solutions
+- Regional & Long-Haul Support
+
+## 🗺️ Coverage
+
+End-to-end coverage across the contiguous United States (excluding Alaska and Hawaii).
+
 ## 📝 License
 
-Copyright © 2026 LONGS FREIGHT LOAD LOGISTICS LLC
+Copyright © 2026 BullyFashion101 LLC. All Rights Reserved.
+
+---
+
+**Built with military precision. Operated with veteran excellence.**

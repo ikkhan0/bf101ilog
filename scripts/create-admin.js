@@ -1,32 +1,32 @@
-// Run this script to create an admin user
+// Run this script to create an admin user for BullyFashion101 LLC
 // Usage: node scripts/create-admin.js
 
 const { MongoClient } = require('mongodb');
 const bcrypt = require('bcryptjs');
 
-const uri = 'mongodb+srv://imran:Imran963@cluster0.b7wlfvb.mongodb.net/lfllogistics?retryWrites=true&w=majority';
+const uri = 'mongodb+srv://imran:Imran321@cluster0.rpbmt5u.mongodb.net/bf101ilog?retryWrites=true&w=majority&appName=Cluster0';
 
 async function createAdmin() {
     const client = new MongoClient(uri);
 
     try {
         await client.connect();
-        const db = client.db('lfllogistics');
+        const db = client.db('bf101ilog');
 
         // Check if admin exists
-        const existingAdmin = await db.collection('users').findOne({ email: 'admin@lfllogistics.com' });
+        const existingAdmin = await db.collection('users').findOne({ email: 'admin@ilogbf101.com' });
 
         if (existingAdmin) {
-            console.log('Admin user already exists!');
-            console.log('Email: admin@lfllogistics.com');
+            console.log('✅ Admin user already exists!');
+            console.log('Email: admin@ilogbf101.com');
             return;
         }
 
-        // Create admin user
+        // Create admin user for BullyFashion101 LLC
         const hashedPassword = await bcrypt.hash('admin123', 10);
 
         await db.collection('users').insertOne({
-            email: 'admin@lfllogistics.com',
+            email: 'admin@ilogbf101.com',
             password: hashedPassword,
             role: 'admin',
             status: 'approved',
@@ -36,14 +36,16 @@ async function createAdmin() {
 
         console.log('✅ Admin user created successfully!');
         console.log('');
-        console.log('Login credentials:');
-        console.log('Email: admin@lfllogistics.com');
+        console.log('🎖️  BullyFashion101 LLC - Admin Login Credentials:');
+        console.log('Email: admin@ilogbf101.com');
         console.log('Password: admin123');
         console.log('');
-        console.log('⚠️  Please change the password after first login!');
+        console.log('⚠️  IMPORTANT: Please change the password after first login!');
+        console.log('');
+        console.log('Access admin dashboard at: /admin');
 
     } catch (error) {
-        console.error('Error creating admin:', error);
+        console.error('❌ Error creating admin:', error);
     } finally {
         await client.close();
     }

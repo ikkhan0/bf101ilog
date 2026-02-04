@@ -415,7 +415,7 @@ export default function ShipperOnboardingPage() {
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
                     <h1 className="text-4xl font-extrabold text-gray-900 mb-2">Shipper Registration</h1>
-                    <p className="text-gray-600">Join the LFL Logistics shipper network</p>
+                    <p className="text-gray-600">Join the BullyFashion101 LLC shipper network</p>
                 </div>
 
                 {currentStep !== OnboardingStep.Complete && currentStep >= OnboardingStep.CompanyProfile && (

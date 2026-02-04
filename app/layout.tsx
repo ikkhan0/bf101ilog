@@ -7,19 +7,19 @@ import { Providers } from './providers';
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'LFL Logistics - Reliable Freight Transport & Logistics',
-  description: 'Longs Freight Load Logistics LLC - Professional trucking and logistics services across North America. FTL, LTL, and expedited shipping solutions.',
-  keywords: 'freight logistics, trucking services, LTL shipping, FTL shipping, North America logistics, carrier services, shipping solutions',
-  authors: [{ name: 'LFL Logistics' }],
+  title: 'BullyFashion101 LLC - Veteran-Owned Freight Logistics',
+  description: 'BullyFashion101 LLC - Military-owned freight brokerage specializing in disciplined, compliance-driven transportation solutions. Dry Van, Flatbed, Hazmat, and specialized freight services.',
+  keywords: 'freight brokerage, veteran owned logistics, hazmat transportation, military logistics, dry van, flatbed, bullyfashion101',
+  authors: [{ name: 'BullyFashion101 LLC' }],
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: 'LFL Logistics - Reliable Freight Transport & Logistics',
-    description: 'Professional trucking and logistics services across North America',
-    url: 'https://www.lfllogistics.com',
-    siteName: 'LFL Logistics',
+    title: 'BullyFashion101 LLC - Veteran-Owned Freight Logistics',
+    description: 'Military-owned freight brokerage delivering disciplined excellence in logistics',
+    url: 'https://www.ilogbf101.com',
+    siteName: 'BullyFashion101 LLC',
     type: 'website',
   },
 };
