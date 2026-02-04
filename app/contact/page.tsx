@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
 
 export default function ContactPage() {
     return (
@@ -202,6 +203,7 @@ export default function ContactPage() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }
