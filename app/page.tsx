@@ -14,7 +14,6 @@ export default function HomePage() {
       <section className="relative h-[700px] flex items-center justify-center">
         <HeroSlider
           images={[
-            '/hero-banner.jpg',
             '/hero-slider-1.jpg',
             '/hero-slider-2.jpg',
             '/hero-slider-3.jpg'
@@ -96,8 +95,8 @@ export default function HomePage() {
             </div>
             <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-secondary">
               <Image
-                src="/about-team.png"
-                alt="BullyFashion101 LLC Professional Brokerage Team"
+                src="/hero-banner.jpg"
+                alt="BullyFashion101 LLC Freight Logdog - Veteran Owned"
                 width={600}
                 height={400}
                 className="w-full h-96 object-cover"
