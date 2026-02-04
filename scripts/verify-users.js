@@ -31,28 +31,28 @@ async function verifyUsers() {
 
             // Create admin
             await db.collection('users').insertOne({
-                email: 'admin@ilogbf101.com',
+                email: 'admin@bf101ilog.com',
                 password: hashedPassword,
                 role: 'admin',
                 status: 'approved',
                 createdAt: new Date(),
                 updatedAt: new Date(),
             });
-            console.log('Created: admin@ilogbf101.com');
+            console.log('Created: admin@bf101ilog.com');
 
             // Create carrier
             const carrierData = {
                 dotNumber: '3456789',
                 mcNumber: 'MC789012',
                 legalName: 'Test Carrier Logistics LLC',
-                contactEmail: 'carrier@testbf101.com',
+                contactEmail: 'carrier@bf101ilog.com',
                 status: 'approved',
                 onboardingCompleted: true,
                 createdAt: new Date(),
             };
             const carrierResult = await db.collection('carriers').insertOne(carrierData);
             const carrierUserResult = await db.collection('users').insertOne({
-                email: 'carrier@testbf101.com',
+                email: 'carrier@bf101ilog.com',
                 password: hashedPassword,
                 role: 'carrier',
                 status: 'approved',
@@ -63,19 +63,19 @@ async function verifyUsers() {
                 { _id: carrierResult.insertedId },
                 { $set: { userId: carrierUserResult.insertedId } }
             );
-            console.log('Created: carrier@testbf101.com');
+            console.log('Created: carrier@bf101ilog.com');
 
             // Create shipper
             const shipperData = {
                 legalName: 'Test Shipper Corporation',
-                contactEmail: 'shipper@testbf101.com',
+                contactEmail: 'shipper@bf101ilog.com',
                 status: 'approved',
                 onboardingCompleted: true,
                 createdAt: new Date(),
             };
             const shipperResult = await db.collection('shippers').insertOne(shipperData);
             const shipperUserResult = await db.collection('users').insertOne({
-                email: 'shipper@testbf101.com',
+                email: 'shipper@bf101ilog.com',
                 password: hashedPassword,
                 role: 'shipper',
                 status: 'approved',
@@ -86,7 +86,7 @@ async function verifyUsers() {
                 { _id: shipperResult.insertedId },
                 { $set: { userId: shipperUserResult.insertedId } }
             );
-            console.log('Created: shipper@testbf101.com\n');
+            console.log('Created: shipper@bf101ilog.com\n');
 
             // Re-fetch users
             const newUsers = await db.collection('users').find({}).toArray();

@@ -14,11 +14,11 @@ async function createAdmin() {
         const db = client.db('bf101ilog');
 
         // Check if admin exists
-        const existingAdmin = await db.collection('users').findOne({ email: 'admin@ilogbf101.com' });
+        const existingAdmin = await db.collection('users').findOne({ email: 'admin@bf101ilog.com' });
 
         if (existingAdmin) {
             console.log('✅ Admin user already exists!');
-            console.log('Email: admin@ilogbf101.com');
+            console.log('Email: admin@bf101ilog.com');
             return;
         }
 
@@ -26,7 +26,7 @@ async function createAdmin() {
         const hashedPassword = await bcrypt.hash('admin123', 10);
 
         await db.collection('users').insertOne({
-            email: 'admin@ilogbf101.com',
+            email: 'admin@bf101ilog.com',
             password: hashedPassword,
             role: 'admin',
             status: 'approved',
@@ -37,7 +37,7 @@ async function createAdmin() {
         console.log('✅ Admin user created successfully!');
         console.log('');
         console.log('🎖️  BullyFashion101 LLC - Admin Login Credentials:');
-        console.log('Email: admin@ilogbf101.com');
+        console.log('Email: admin@bf101ilog.com');
         console.log('Password: admin123');
         console.log('');
         console.log('⚠️  IMPORTANT: Please change the password after first login!');

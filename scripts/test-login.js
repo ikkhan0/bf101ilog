@@ -13,7 +13,7 @@ async function testLogin() {
 
         // Test password
         const testPassword = 'Test123!';
-        const testEmail = 'admin@ilogbf101.com';
+        const testEmail = 'admin@bf101ilog.com';
 
         console.log('\n' + '='.repeat(80));
         console.log('TESTING LOGIN AUTHENTICATION');
