@@ -8,7 +8,7 @@ export default function Navigation() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="bg-white shadow-lg sticky top-0 z-50 border-b-2 border-secondary/20">
+        <header className="bg-gradient-to-r from-primary/95 via-primary-dark/95 to-primary/95 backdrop-blur-md shadow-2xl sticky top-0 z-50 border-b border-white/10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="flex justify-between items-center h-20">
                     <Link href="/" className="flex items-center space-x-3">
@@ -24,18 +24,18 @@ export default function Navigation() {
 
                     {/* Desktop Navigation */}
                     <nav className="desktop-nav gap-8 items-center">
-                        <Link href="/" className="text-primary font-semibold text-sm uppercase hover:text-secondary transition-colors">Home</Link>
-                        <Link href="/services" className="text-primary font-semibold text-sm uppercase hover:text-secondary transition-colors">Services</Link>
-                        <Link href="/about" className="text-primary font-semibold text-sm uppercase hover:text-secondary transition-colors">About Us</Link>
-                        <Link href="/contact" className="text-primary font-semibold text-sm uppercase hover:text-secondary transition-colors">Contact</Link>
+                        <Link href="/" className="text-white font-semibold text-sm uppercase hover:text-accent transition-colors">Home</Link>
+                        <Link href="/services" className="text-white font-semibold text-sm uppercase hover:text-accent transition-colors">Services</Link>
+                        <Link href="/about" className="text-white font-semibold text-sm uppercase hover:text-accent transition-colors">About Us</Link>
+                        <Link href="/contact" className="text-white font-semibold text-sm uppercase hover:text-accent transition-colors">Contact</Link>
                     </nav>
 
                     {/* Desktop CTA Buttons */}
                     <div className="desktop-nav items-center space-x-4">
-                        <Link href="/portal/carrier" target="_blank" rel="noopener noreferrer" className="px-5 py-2 text-primary border-2 border-primary rounded-full font-bold hover:bg-primary hover:text-white transition-all">
+                        <Link href="/portal/carrier" target="_blank" rel="noopener noreferrer" className="px-5 py-2 text-white border-2 border-white rounded-full font-bold hover:bg-white hover:text-primary transition-all">
                             Carrier Portal
                         </Link>
-                        <Link href="/portal/shipper" target="_blank" rel="noopener noreferrer" className="px-5 py-2 bg-secondary text-white rounded-full font-bold hover:bg-secondary-dark transition-all shadow-lg">
+                        <Link href="/portal/shipper" target="_blank" rel="noopener noreferrer" className="px-5 py-2 bg-secondary text-white rounded-full font-bold hover:bg-accent transition-all shadow-lg">
                             Shipper Portal
                         </Link>
                     </div>
@@ -44,7 +44,7 @@ export default function Navigation() {
                     <div className="mobile-menu-btn flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="text-primary hover:text-secondary focus:outline-none"
+                            className="text-white hover:text-accent focus:outline-none"
                         >
                             <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 {isOpen ? (
@@ -60,17 +60,17 @@ export default function Navigation() {
 
             {/* Mobile Menu Overlay */}
             {isOpen && (
-                <div className="md:hidden bg-white border-t-2 border-secondary/20">
+                <div className="md:hidden bg-primary-dark/98 backdrop-blur-md border-t border-white/10">
                     <div className="px-4 pt-2 pb-6 space-y-2">
-                        <Link href="/" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-base font-bold text-primary hover:bg-bg-light rounded-lg transition">Home</Link>
-                        <Link href="/services" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-base font-bold text-primary hover:bg-bg-light rounded-lg transition">Services</Link>
-                        <Link href="/about" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-base font-bold text-primary hover:bg-bg-light rounded-lg transition">About Us</Link>
-                        <Link href="/contact" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-base font-bold text-primary hover:bg-bg-light rounded-lg transition">Contact</Link>
-                        <div className="border-t-2 border-secondary/20 my-2 pt-2 space-y-3">
-                            <Link href="/portal/carrier" onClick={() => setIsOpen(false)} target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-3 text-primary border-2 border-primary rounded-lg font-bold hover:bg-primary hover:text-white transition">
+                        <Link href="/" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-base font-bold text-white hover:bg-white/10 rounded-lg transition">Home</Link>
+                        <Link href="/services" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-base font-bold text-white hover:bg-white/10 rounded-lg transition">Services</Link>
+                        <Link href="/about" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-base font-bold text-white hover:bg-white/10 rounded-lg transition">About Us</Link>
+                        <Link href="/contact" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-base font-bold text-white hover:bg-white/10 rounded-lg transition">Contact</Link>
+                        <div className="border-t border-white/20 my-2 pt-2 space-y-3">
+                            <Link href="/portal/carrier" onClick={() => setIsOpen(false)} target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-3 text-white border-2 border-white rounded-lg font-bold hover:bg-white hover:text-primary transition">
                                 Carrier Portal
                             </Link>
-                            <Link href="/portal/shipper" onClick={() => setIsOpen(false)} target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-3 bg-secondary text-white rounded-lg font-bold hover:bg-secondary-dark transition shadow-lg">
+                            <Link href="/portal/shipper" onClick={() => setIsOpen(false)} target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-3 bg-secondary text-white rounded-lg font-bold hover:bg-accent transition shadow-lg">
                                 Shipper Portal
                             </Link>
                         </div>

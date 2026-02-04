@@ -95,8 +95,8 @@ export default function HomePage() {
             </div>
             <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-secondary">
               <Image
-                src="/bf101-logo.jpg"
-                alt="BullyFashion101 LLC Logo"
+                src="/brokerage-team.jpg"
+                alt="BullyFashion101 LLC Professional Brokerage Team"
                 width={600}
                 height={400}
                 className="w-full h-96 object-cover"
