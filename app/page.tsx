@@ -85,7 +85,7 @@ export default function HomePage() {
                 logistics expertise and hazardous materials experience to deliver precision and reliability for shippers who demand excellence.
               </p>
               <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-                Our military background instilled a deep understanding of operational planning, risk management, and safety—core
+                Our military background instilled a deep understanding of <strong>operational planning</strong>, <strong>risk management</strong>, and <strong>safety</strong>—core
                 elements in moving regulated and time-sensitive freight. We continue serving critical supply chains by helping
                 food distributors, manufacturers, and industrial shippers secure dependable transportation while maintaining
                 strict regulatory standards.
@@ -99,7 +99,7 @@ export default function HomePage() {
             </div>
             <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-secondary">
               <Image
-                src="/brokerage-team.jpg"
+                src="/about-team.png"
                 alt="BullyFashion101 LLC Professional Brokerage Team"
                 width={600}
                 height={400}
