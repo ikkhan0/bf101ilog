@@ -8,7 +8,14 @@ export default function Navigation() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="bg-gradient-to-r from-primary/95 via-primary-dark/95 to-primary/95 backdrop-blur-md shadow-2xl sticky top-0 z-50 border-b border-white/10">
+        <header
+            className="sticky top-0 z-50 shadow-2xl border-b border-white/10"
+            style={{
+                background: 'linear-gradient(to right, rgba(30, 58, 138, 0.95), rgba(30, 64, 175, 0.95), rgba(30, 58, 138, 0.95))',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+            }}
+        >
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <div className="flex justify-between items-center h-20">
                     <Link href="/" className="flex items-center space-x-3">
@@ -23,28 +30,71 @@ export default function Navigation() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="desktop-nav gap-8 items-center">
-                        <Link href="/" className="text-white font-semibold text-sm uppercase hover:text-accent transition-colors">Home</Link>
-                        <Link href="/services" className="text-white font-semibold text-sm uppercase hover:text-accent transition-colors">Services</Link>
-                        <Link href="/about" className="text-white font-semibold text-sm uppercase hover:text-accent transition-colors">About Us</Link>
-                        <Link href="/contact" className="text-white font-semibold text-sm uppercase hover:text-accent transition-colors">Contact</Link>
+                    <nav className="hidden md:flex gap-8 items-center">
+                        <Link
+                            href="/"
+                            style={{ color: '#ffffff' }}
+                            className="font-semibold text-sm uppercase transition-all hover:opacity-80"
+                        >
+                            Home
+                        </Link>
+                        <Link
+                            href="/services"
+                            style={{ color: '#ffffff' }}
+                            className="font-semibold text-sm uppercase transition-all hover:opacity-80"
+                        >
+                            Services
+                        </Link>
+                        <Link
+                            href="/about"
+                            style={{ color: '#ffffff' }}
+                            className="font-semibold text-sm uppercase transition-all hover:opacity-80"
+                        >
+                            About Us
+                        </Link>
+                        <Link
+                            href="/contact"
+                            style={{ color: '#ffffff' }}
+                            className="font-semibold text-sm uppercase transition-all hover:opacity-80"
+                        >
+                            Contact
+                        </Link>
                     </nav>
 
                     {/* Desktop CTA Buttons */}
-                    <div className="desktop-nav items-center space-x-4">
-                        <Link href="/portal/carrier" target="_blank" rel="noopener noreferrer" className="px-5 py-2 text-white border-2 border-white rounded-full font-bold hover:bg-white hover:text-primary transition-all">
+                    <div className="hidden md:flex items-center space-x-4">
+                        <Link
+                            href="/portal/carrier"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                                color: '#ffffff',
+                                borderColor: '#ffffff',
+                            }}
+                            className="px-5 py-2 border-2 rounded-full font-bold transition-all hover:bg-white hover:text-blue-900"
+                        >
                             Carrier Portal
                         </Link>
-                        <Link href="/portal/shipper" target="_blank" rel="noopener noreferrer" className="px-5 py-2 bg-secondary text-white rounded-full font-bold hover:bg-accent transition-all shadow-lg">
+                        <Link
+                            href="/portal/shipper"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                                backgroundColor: '#dc2626',
+                                color: '#ffffff',
+                            }}
+                            className="px-5 py-2 rounded-full font-bold transition-all hover:bg-red-700 shadow-lg"
+                        >
                             Shipper Portal
                         </Link>
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <div className="mobile-menu-btn flex items-center">
+                    <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="text-white hover:text-accent focus:outline-none"
+                            style={{ color: '#ffffff' }}
+                            className="focus:outline-none hover:opacity-80 transition-opacity"
                         >
                             <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 {isOpen ? (
@@ -60,17 +110,72 @@ export default function Navigation() {
 
             {/* Mobile Menu Overlay */}
             {isOpen && (
-                <div className="md:hidden bg-primary-dark/98 backdrop-blur-md border-t border-white/10">
+                <div
+                    className="md:hidden border-t border-white/10"
+                    style={{
+                        background: 'rgba(30, 64, 175, 0.98)',
+                        backdropFilter: 'blur(12px)',
+                        WebkitBackdropFilter: 'blur(12px)',
+                    }}
+                >
                     <div className="px-4 pt-2 pb-6 space-y-2">
-                        <Link href="/" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-base font-bold text-white hover:bg-white/10 rounded-lg transition">Home</Link>
-                        <Link href="/services" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-base font-bold text-white hover:bg-white/10 rounded-lg transition">Services</Link>
-                        <Link href="/about" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-base font-bold text-white hover:bg-white/10 rounded-lg transition">About Us</Link>
-                        <Link href="/contact" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-base font-bold text-white hover:bg-white/10 rounded-lg transition">Contact</Link>
+                        <Link
+                            href="/"
+                            onClick={() => setIsOpen(false)}
+                            style={{ color: '#ffffff' }}
+                            className="block px-3 py-3 text-base font-bold rounded-lg transition-all hover:bg-white/10"
+                        >
+                            Home
+                        </Link>
+                        <Link
+                            href="/services"
+                            onClick={() => setIsOpen(false)}
+                            style={{ color: '#ffffff' }}
+                            className="block px-3 py-3 text-base font-bold rounded-lg transition-all hover:bg-white/10"
+                        >
+                            Services
+                        </Link>
+                        <Link
+                            href="/about"
+                            onClick={() => setIsOpen(false)}
+                            style={{ color: '#ffffff' }}
+                            className="block px-3 py-3 text-base font-bold rounded-lg transition-all hover:bg-white/10"
+                        >
+                            About Us
+                        </Link>
+                        <Link
+                            href="/contact"
+                            onClick={() => setIsOpen(false)}
+                            style={{ color: '#ffffff' }}
+                            className="block px-3 py-3 text-base font-bold rounded-lg transition-all hover:bg-white/10"
+                        >
+                            Contact
+                        </Link>
                         <div className="border-t border-white/20 my-2 pt-2 space-y-3">
-                            <Link href="/portal/carrier" onClick={() => setIsOpen(false)} target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-3 text-white border-2 border-white rounded-lg font-bold hover:bg-white hover:text-primary transition">
+                            <Link
+                                href="/portal/carrier"
+                                onClick={() => setIsOpen(false)}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                    color: '#ffffff',
+                                    borderColor: '#ffffff',
+                                }}
+                                className="block w-full text-center px-4 py-3 border-2 rounded-lg font-bold transition-all hover:bg-white hover:text-blue-900"
+                            >
                                 Carrier Portal
                             </Link>
-                            <Link href="/portal/shipper" onClick={() => setIsOpen(false)} target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-3 bg-secondary text-white rounded-lg font-bold hover:bg-accent transition shadow-lg">
+                            <Link
+                                href="/portal/shipper"
+                                onClick={() => setIsOpen(false)}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                    backgroundColor: '#dc2626',
+                                    color: '#ffffff',
+                                }}
+                                className="block w-full text-center px-4 py-3 rounded-lg font-bold transition-all hover:bg-red-700 shadow-lg"
+                            >
                                 Shipper Portal
                             </Link>
                         </div>
