@@ -10,20 +10,17 @@ export default function HomePage() {
       {/* Navigation */}
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative h-[700px] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/hero-banner.jpg"
-            alt="BullyFashion101 LLC - Freight Logdog"
-            fill
-            className="object-cover"
-            priority
-          />
-          {/* Dark Overlay for Text Readability */}
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
+      {/* Hero Section with Slider */}
+      <section className="relative h-[700px] flex items-center justify-center">
+        <HeroSlider
+          images={[
+            '/hero-banner.jpg',
+            '/hero-slider-1.jpg',
+            '/hero-slider-2.jpg',
+            '/hero-slider-3.jpg'
+          ]}
+          interval={5000}
+        />
 
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <div className="mb-6">
