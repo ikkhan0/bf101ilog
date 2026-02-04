@@ -34,28 +34,28 @@ export default function Navigation() {
                         <Link
                             href="/"
                             style={{ color: '#ffffff' }}
-                            className="font-semibold text-sm uppercase transition-all hover:opacity-80"
+                            className="!text-white font-semibold text-sm uppercase transition-all hover:opacity-80"
                         >
                             Home
                         </Link>
                         <Link
                             href="/services"
                             style={{ color: '#ffffff' }}
-                            className="font-semibold text-sm uppercase transition-all hover:opacity-80"
+                            className="!text-white font-semibold text-sm uppercase transition-all hover:opacity-80"
                         >
                             Services
                         </Link>
                         <Link
                             href="/about"
                             style={{ color: '#ffffff' }}
-                            className="font-semibold text-sm uppercase transition-all hover:opacity-80"
+                            className="!text-white font-semibold text-sm uppercase transition-all hover:opacity-80"
                         >
                             About Us
                         </Link>
                         <Link
                             href="/contact"
                             style={{ color: '#ffffff' }}
-                            className="font-semibold text-sm uppercase transition-all hover:opacity-80"
+                            className="!text-white font-semibold text-sm uppercase transition-all hover:opacity-80"
                         >
                             Contact
                         </Link>
@@ -71,7 +71,7 @@ export default function Navigation() {
                                 color: '#ffffff',
                                 borderColor: '#ffffff',
                             }}
-                            className="px-5 py-2 border-2 rounded-full font-bold transition-all hover:bg-white hover:text-blue-900"
+                            className="!text-white px-5 py-2 border-2 rounded-full font-bold transition-all hover:bg-white hover:text-blue-900"
                         >
                             Carrier Portal
                         </Link>
@@ -83,7 +83,7 @@ export default function Navigation() {
                                 backgroundColor: '#dc2626',
                                 color: '#ffffff',
                             }}
-                            className="px-5 py-2 rounded-full font-bold transition-all hover:bg-red-700 shadow-lg"
+                            className="!text-white px-5 py-2 rounded-full font-bold transition-all hover:bg-red-700 shadow-lg"
                         >
                             Shipper Portal
                         </Link>
@@ -94,7 +94,7 @@ export default function Navigation() {
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             style={{ color: '#ffffff' }}
-                            className="focus:outline-none hover:opacity-80 transition-opacity"
+                            className="!text-white focus:outline-none hover:opacity-80 transition-opacity"
                         >
                             <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 {isOpen ? (
@@ -123,7 +123,7 @@ export default function Navigation() {
                             href="/"
                             onClick={() => setIsOpen(false)}
                             style={{ color: '#ffffff' }}
-                            className="block px-3 py-3 text-base font-bold rounded-lg transition-all hover:bg-white/10"
+                            className="!text-white block px-3 py-3 text-base font-bold rounded-lg transition-all hover:bg-white/10"
                         >
                             Home
                         </Link>
@@ -131,7 +131,7 @@ export default function Navigation() {
                             href="/services"
                             onClick={() => setIsOpen(false)}
                             style={{ color: '#ffffff' }}
-                            className="block px-3 py-3 text-base font-bold rounded-lg transition-all hover:bg-white/10"
+                            className="!text-white block px-3 py-3 text-base font-bold rounded-lg transition-all hover:bg-white/10"
                         >
                             Services
                         </Link>
@@ -139,7 +139,7 @@ export default function Navigation() {
                             href="/about"
                             onClick={() => setIsOpen(false)}
                             style={{ color: '#ffffff' }}
-                            className="block px-3 py-3 text-base font-bold rounded-lg transition-all hover:bg-white/10"
+                            className="!text-white block px-3 py-3 text-base font-bold rounded-lg transition-all hover:bg-white/10"
                         >
                             About Us
                         </Link>
@@ -147,7 +147,7 @@ export default function Navigation() {
                             href="/contact"
                             onClick={() => setIsOpen(false)}
                             style={{ color: '#ffffff' }}
-                            className="block px-3 py-3 text-base font-bold rounded-lg transition-all hover:bg-white/10"
+                            className="!text-white block px-3 py-3 text-base font-bold rounded-lg transition-all hover:bg-white/10"
                         >
                             Contact
                         </Link>
@@ -161,7 +161,7 @@ export default function Navigation() {
                                     color: '#ffffff',
                                     borderColor: '#ffffff',
                                 }}
-                                className="block w-full text-center px-4 py-3 border-2 rounded-lg font-bold transition-all hover:bg-white hover:text-blue-900"
+                                className="!text-white block w-full text-center px-4 py-3 border-2 rounded-lg font-bold transition-all hover:bg-white hover:text-blue-900"
                             >
                                 Carrier Portal
                             </Link>
@@ -174,7 +174,7 @@ export default function Navigation() {
                                     backgroundColor: '#dc2626',
                                     color: '#ffffff',
                                 }}
-                                className="block w-full text-center px-4 py-3 rounded-lg font-bold transition-all hover:bg-red-700 shadow-lg"
+                                className="!text-white block w-full text-center px-4 py-3 rounded-lg font-bold transition-all hover:bg-red-700 shadow-lg"
                             >
                                 Shipper Portal
                             </Link>

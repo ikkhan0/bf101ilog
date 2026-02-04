@@ -42,5 +42,5 @@ export async function getDatabase(): Promise<Db> {
     throw new Error('MongoDB client not initialized. Please check MONGODB_URI environment variable.');
   }
   const client = await clientPromise;
-  return client.db('lfllogistics');
+  return client.db('bf101ilog');
 }
