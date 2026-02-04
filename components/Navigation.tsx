@@ -13,7 +13,7 @@ export default function Navigation() {
                 <div className="flex justify-between items-center h-20">
                     <Link href="/" className="flex items-center space-x-3">
                         <Image
-                            src="/bf101-logo.jpg"
+                            src="/bf101-logo-transparent.png"
                             alt="BullyFashion101 LLC Logo"
                             width={200}
                             height={70}
