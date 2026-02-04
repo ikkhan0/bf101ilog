@@ -155,17 +155,17 @@ export async function GET(request: NextRequest) {
                 admin: {
                     email: 'admin@lfllogistics.com',
                     password: testPassword,
-                    url: 'https://longfreight.vercel.app/login'
+                    url: 'https://www.bf101ilog.com/login'
                 },
                 carrier: {
                     email: 'testcarrier@example.com',
                     password: testPassword,
-                    url: 'https://longfreight.vercel.app/carrier-dashboard'
+                    url: 'https://www.bf101ilog.com/carrier-dashboard'
                 },
                 shipper: {
                     email: 'testshipper@example.com',
                     password: testPassword,
-                    url: 'https://longfreight.vercel.app/shipper-dashboard'
+                    url: 'https://www.bf101ilog.com/shipper-dashboard'
                 }
             }
         });

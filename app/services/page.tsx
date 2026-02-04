@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 
 export default function ServicesPage() {
@@ -19,6 +20,17 @@ export default function ServicesPage() {
                         We provide freight brokerage services to shippers transporting general commodities and to motor carriers
                         operating within the United States. Services are performed in accordance with applicable federal and state laws and regulations.
                     </p>
+                </div>
+
+                {/* Warehouse Image Section */}
+                <div className="mb-16 rounded-2xl overflow-hidden shadow-2xl">
+                    <Image
+                        src="/warehouse.jpg"
+                        alt="Modern warehouse operations with organized logistics"
+                        width={1400}
+                        height={600}
+                        className="w-full h-[400px] object-cover"
+                    />
                 </div>
 
                 {/* Core Services */}
@@ -102,6 +114,51 @@ export default function ServicesPage() {
                             <div className="text-5xl mb-4">🏭</div>
                             <h3 className="text-2xl font-bold mb-3">Industrial Manufacturing</h3>
                             <p className="text-gray-100">Heavy haul and specialized equipment transport for manufacturing sectors</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Logistics Operations Gallery */}
+                <div className="grid md:grid-cols-3 gap-8 mb-16">
+                    <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+                        <Image
+                            src="/brokerage-ops.jpg"
+                            alt="Modern freight brokerage operations center"
+                            width={600}
+                            height={400}
+                            className="w-full h-64 object-cover"
+                        />
+                        <div className="p-4 bg-white">
+                            <h4 className="font-bold text-lg text-primary">Brokerage Operations</h4>
+                            <p className="text-sm text-gray-600 mt-2">24/7 logistics coordination and tracking</p>
+                        </div>
+                    </div>
+
+                    <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+                        <Image
+                            src="/loading-dock.jpg"
+                            alt="Professional loading dock operations"
+                            width={600}
+                            height={400}
+                            className="w-full h-64 object-cover"
+                        />
+                        <div className="p-4 bg-white">
+                            <h4 className="font-bold text-lg text-primary">Loading Operations</h4>
+                            <p className="text-sm text-gray-600 mt-2">Efficient freight handling and safety protocols</p>
+                        </div>
+                    </div>
+
+                    <div className="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+                        <Image
+                            src="/dry-van.jpg"
+                            alt="Professional dry van trailer on highway"
+                            width={600}
+                            height={400}
+                            className="w-full h-64 object-cover"
+                        />
+                        <div className="p-4 bg-white">
+                            <h4 className="font-bold text-lg text-primary">Dry Van Services</h4>
+                            <p className="text-sm text-gray-600 mt-2">Full truckload capacity with precision delivery</p>
                         </div>
                     </div>
                 </div>

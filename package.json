@@ -2,6 +2,14 @@
   "name": "bullyfashion101-logistics",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ikkhan0/bf101ilog.git"
+  },
+  "homepage": "https://www.bf101ilog.com",
+  "bugs": {
+    "url": "https://github.com/ikkhan0/bf101ilog/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

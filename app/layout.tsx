@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'BullyFashion101 LLC - Veteran-Owned Freight Logistics',
     description: 'Military-owned freight brokerage delivering disciplined excellence in logistics',
-    url: 'https://www.ilogbf101.com',
+    url: 'https://www.bf101ilog.com',
     siteName: 'BullyFashion101 LLC',
     type: 'website',
   },

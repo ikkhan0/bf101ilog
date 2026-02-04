@@ -40,8 +40,8 @@ export default function AboutPage() {
                     </div>
                     <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-secondary">
                         <Image
-                            src="/hero-banner.jpg"
-                            alt="BullyFashion101 LLC - Military Owned Logistics"
+                            src="/reefer-truck.jpg"
+                            alt="BullyFashion101 LLC - Professional Logistics Operations"
                             width={600}
                             height={400}
                             className="w-full h-full object-cover"

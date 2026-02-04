@@ -151,17 +151,17 @@ async function createTestUsers() {
         console.log('1️⃣  ADMIN:');
         console.log('   Email: admin@lfllogistics.com');
         console.log('   Password: TestPass123');
-        console.log('   URL: https://longfreight.vercel.app/login\n');
+        console.log('   URL: https://www.bf101ilog.com/login\n');
 
         console.log('2️⃣  TEST CARRIER:');
         console.log('   Email: testcarrier@example.com');
         console.log('   Password: TestPass123');
-        console.log('   URL: https://longfreight.vercel.app/carrier-dashboard\n');
+        console.log('   URL: https://www.bf101ilog.com/carrier-dashboard\n');
 
         console.log('3️⃣  TEST SHIPPER:');
         console.log('   Email: testshipper@example.com');
         console.log('   Password: TestPass123');
-        console.log('   URL: https://longfreight.vercel.app/shipper-dashboard\n');
+        console.log('   URL: https://www.bf101ilog.com/shipper-dashboard\n');
         console.log('='.repeat(60));
 
     } catch (error) {

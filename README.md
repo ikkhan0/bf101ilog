@@ -115,12 +115,18 @@ ADMIN_EMAIL=EM@ilogbf101.com
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
+### Production
 
-1. Push code to GitHub
-2. Connect repository to Vercel
-3. Add environment variables
-4. Deploy!
+- **GitHub Repository:** [https://github.com/ikkhan0/bf101ilog](https://github.com/ikkhan0/bf101ilog)
+- **Vercel Dashboard:** [https://vercel.com/imran-khans-projects-01901877/bf101ilog](https://vercel.com/imran-khans-projects-01901877/bf101ilog)
+- **Live Site:** [https://www.bf101ilog.com/](https://www.bf101ilog.com/)
+
+### Vercel Deployment Steps
+
+1. Push code to GitHub repository
+2. Vercel automatically deploys from the main branch
+3. Environment variables are already configured
+4. Domain is connected and live!
 
 ```bash
 # Build production

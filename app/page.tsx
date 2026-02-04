@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Navigation from '@/components/Navigation';
+import HeroSlider from '@/components/HeroSlider';
 
 export default function HomePage() {
   return (
@@ -8,10 +9,17 @@ export default function HomePage() {
       {/* Navigation */}
       <Navigation />
 
-      {/* Hero Section with Banner */}
-      <section className="relative h-[700px] flex items-center justify-center bg-gradient-to-br from-primary via-accent to-primary-dark">
-        <div className="absolute inset-0 bg-[url('/hero-banner.jpg')] bg-cover bg-center opacity-90"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60"></div>
+      {/* Hero Section with Slider */}
+      <section className="relative h-[700px] flex items-center justify-center">
+        <HeroSlider
+          images={[
+            '/hero-slider-1.jpg',
+            '/hero-slider-2.jpg',
+            '/hero-slider-3.jpg',
+            '/hero-slider-4.jpg'
+          ]}
+          interval={5000}
+        />
 
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <div className="mb-6">
@@ -19,13 +27,16 @@ export default function HomePage() {
               🎖️ VETERAN OWNED & OPERATED
             </span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 drop-shadow-2xl">
-            TRANSPORTATION SOLUTIONS<br />IN A BULLY FASHION
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 drop-shadow-2xl">
+            Welcome to BullyFashion101 LLC
           </h1>
-          <p className="text-2xl md:text-3xl text-gray-100 mb-4 font-semibold drop-shadow-lg">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 drop-shadow-2xl">
+            TRANSPORTATION SOLUTIONS<br />IN A BULLY FASHION
+          </h2>
+          <p className="text-xl md:text-2xl text-gray-100 mb-4 font-semibold drop-shadow-lg">
             Disciplined Excellence in Freight Logistics
           </p>
-          <p className="text-xl text-gray-200 mb-8 italic">
+          <p className="text-lg md:text-xl text-gray-200 mb-8 italic">
             "Good Brokers don't allow good truckers nor good customers to be Bullied."
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
