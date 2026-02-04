@@ -30,7 +30,7 @@ export default function Navigation() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex gap-8 items-center">
+                    <nav className="desktop-nav gap-8 items-center">
                         <Link
                             href="/"
                             style={{ color: '#ffffff' }}
@@ -62,7 +62,7 @@ export default function Navigation() {
                     </nav>
 
                     {/* Desktop CTA Buttons */}
-                    <div className="hidden md:flex items-center space-x-4">
+                    <div className="desktop-nav items-center space-x-4">
                         <Link
                             href="/portal/carrier"
                             target="_blank"
@@ -90,7 +90,7 @@ export default function Navigation() {
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <div className="md:hidden flex items-center">
+                    <div className="mobile-menu-btn flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             style={{ color: '#ffffff' }}

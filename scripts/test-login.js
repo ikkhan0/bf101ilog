@@ -73,7 +73,7 @@ async function testLogin() {
         console.log('\n' + '='.repeat(80));
         console.log('SOLUTION:');
         console.log('='.repeat(80));
-        console.log('\n1. Email: admin@ilogbf101.com');
+        console.log('\n1. Email: admin@bf101ilog.com');
         console.log('   Password: Test123!');
         console.log('   Login URL: http://localhost:3000/login\n');
         console.log('2. Make sure to type password EXACTLY: Test123!');
