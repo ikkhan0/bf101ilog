@@ -28,9 +28,9 @@ export default function ContactPage() {
                                     <span className="text-2xl">👤</span>
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-lg mb-1 text-primary">Owner</h3>
+                                    <h3 className="font-bold text-lg mb-1 text-primary">Founder</h3>
                                     <p className="text-gray-700 font-semibold">Erv Moore</p>
-                                    <p className="text-sm text-text-secondary">Founder & Operator</p>
+                                    <p className="text-sm text-text-secondary">Operator</p>
                                 </div>
                             </div>
 
