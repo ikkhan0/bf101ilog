@@ -16,7 +16,7 @@ export default function AboutPage() {
                     </div>
                     <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">About BullyFashion101 LLC</h1>
                     <p className="text-2xl text-text-secondary max-w-3xl mx-auto">
-                        Veteran-Owned Freight Brokerage | Disciplined Excellence in Logistics
+                        Military-Owned Freight Brokerage | Disciplined Excellence in Logistics
                     </p>
                 </div>
 
@@ -130,13 +130,13 @@ export default function AboutPage() {
                     <div className="max-w-3xl mx-auto text-center">
                         <div className="mb-6">
                             <h3 className="text-3xl font-bold text-primary mb-2">Erv Moore</h3>
-                            <p className="text-xl text-secondary font-semibold mb-4">Owner & Founder</p>
+                            <p className="text-xl text-secondary font-semibold mb-4">Founder</p>
                             <div className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full font-bold text-sm mb-6">
-                                🎖️ VETERAN | HAZMAT CERTIFIED
+                                🎖️ MILITARY OWNED
                             </div>
                         </div>
                         <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                            With extensive military experience and specialized hazardous materials credentials, Erv founded BullyFashion101 LLC
+                            With extensive military experience and specialized logistics training, Erv founded BullyFashion101 LLC
                             to bring military-grade discipline and compliance to civilian freight logistics. His background in operational planning
                             and risk management ensures every shipment is handled with precision and care.
                         </p>

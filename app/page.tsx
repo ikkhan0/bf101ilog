@@ -24,7 +24,7 @@ export default function HomePage() {
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <div className="mb-6">
             <span className="inline-block px-6 py-2 bg-secondary text-white rounded-full font-bold text-sm tracking-wider mb-4 animate-pulse">
-              🎖️ VETERAN OWNED & OPERATED
+              🎖️ MILITARY OWNED & OPERATED
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 drop-shadow-2xl">
@@ -76,7 +76,7 @@ export default function HomePage() {
               </div>
               <h2 className="text-4xl font-bold text-primary mb-6">Welcome to BullyFashion101 LLC</h2>
               <p className="text-gray-700 text-lg mb-4 leading-relaxed">
-                BullyFashion101 LLC is a <strong>veteran-owned</strong> freight brokerage specializing in disciplined,
+                BullyFashion101 LLC is a <strong>military-owned</strong> freight brokerage specializing in disciplined,
                 compliance-driven transportation solutions. Founded by <strong>Erv Moore</strong>, we apply military-developed
                 logistics expertise and hazardous materials experience to deliver precision and reliability for shippers who demand excellence.
               </p>
@@ -136,7 +136,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4">Hazardous Materials</h3>
               <p className="text-gray-600 leading-relaxed">
-                Specialized handling with strict regulatory compliance and expert hazmat transportation credentials.
+                Specialized handling with strict regulatory compliance (Agent services only until certified).
               </p>
             </div>
 

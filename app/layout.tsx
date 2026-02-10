@@ -7,16 +7,16 @@ import { Providers } from './providers';
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'BullyFashion101 LLC - Veteran-Owned Freight Logistics',
+  title: 'BullyFashion101 LLC - Military-Owned Freight Logistics',
   description: 'BullyFashion101 LLC - Military-owned freight brokerage specializing in disciplined, compliance-driven transportation solutions. Dry Van, Flatbed, Hazmat, and specialized freight services.',
-  keywords: 'freight brokerage, veteran owned logistics, hazmat transportation, military logistics, dry van, flatbed, bullyfashion101',
+  keywords: 'freight brokerage, military owned logistics, hazmat transportation, military logistics, dry van, flatbed, bullyfashion101',
   authors: [{ name: 'BullyFashion101 LLC' }],
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: 'BullyFashion101 LLC - Veteran-Owned Freight Logistics',
+    title: 'BullyFashion101 LLC - Military-Owned Freight Logistics',
     description: 'Military-owned freight brokerage delivering disciplined excellence in logistics',
     url: 'https://www.bf101ilog.com',
     siteName: 'BullyFashion101 LLC',

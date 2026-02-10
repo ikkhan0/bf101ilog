@@ -11,7 +11,7 @@ export default function ServicesPage() {
             <div className="max-w-7xl mx-auto px-4 py-10 md:py-16">
                 <div className="text-center mb-12">
                     <div className="inline-block px-4 py-2 bg-secondary/10 text-secondary rounded-full font-bold text-sm mb-4">
-                        🎖️ VETERAN OWNED
+                        🎖️ MILITARY OWNED
                     </div>
                     <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">Freight Brokerage Services</h1>
                     <p className="text-2xl text-text-secondary max-w-3xl mx-auto mb-4">
@@ -104,7 +104,7 @@ export default function ServicesPage() {
                         <div className="text-center">
                             <div className="text-5xl mb-4">⚗️</div>
                             <h3 className="text-2xl font-bold mb-3">Hazardous Materials</h3>
-                            <p className="text-gray-100">Specialized handling with strict regulatory compliance and expert hazmat credentials</p>
+                            <p className="text-gray-100">Specialized handling with strict regulatory compliance (Agent services only until certified)</p>
                         </div>
                         <div className="text-center">
                             <div className="text-5xl mb-4">🥶</div>

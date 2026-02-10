@@ -8,7 +8,7 @@ export default function Footer() {
                     <div>
                         <h3 className="text-2xl font-bold mb-4 text-secondary">BullyFashion101 LLC</h3>
                         <p className="text-gray-300 leading-relaxed">
-                            Veteran-owned freight brokerage delivering disciplined, compliance-driven transportation solutions.
+                            Military-owned freight brokerage delivering disciplined, compliance-driven transportation solutions.
                             Raising the standard of service in logistics through military precision and transparent communication.
                         </p>
                         <div className="mt-4 p-4 bg-white/10 rounded-lg border border-secondary/30">
@@ -48,7 +48,7 @@ export default function Footer() {
                 <div className="border-t border-white/20 pt-8 text-center text-gray-300">
                     <p>&copy; {new Date().getFullYear()} BullyFashion101 LLC. All Rights Reserved. | Licensed Freight Broker</p>
                     <p className="text-sm mt-2 text-gray-400">
-                        Compliance-Driven • Veteran-Owned • Mission-Ready
+                        Compliance-Driven • Military-Owned • Mission-Ready
                     </p>
                 </div>
             </div>
