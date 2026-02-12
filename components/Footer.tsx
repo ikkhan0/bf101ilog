@@ -35,7 +35,7 @@ export default function Footer() {
                         <ul className="space-y-2 text-gray-300">
                             <li className="font-semibold text-white">Erv Moore, Owner</li>
                             <li>📞 (326) 467-2949</li>
-                            <li>📧 EM@ilogbf101.com</li>
+                            <li>📧 Em@bf101ilog.com</li>
                             <li className="mt-4 pt-4 border-t border-white/20">
                                 <span className="inline-block px-3 py-1 bg-secondary/20 text-secondary rounded-full text-sm font-bold">
                                     🎖️ MILITARY OWNED

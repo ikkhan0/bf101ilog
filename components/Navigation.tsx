@@ -38,19 +38,40 @@ export default function Navigation() {
                         >
                             Home
                         </Link>
+
+                        {/* Services Dropdown */}
+                        <div className="relative group">
+                            <button
+                                style={{ color: '#ffffff' }}
+                                className="!text-white font-semibold text-sm uppercase transition-all hover:opacity-80 flex items-center gap-1 focus:outline-none"
+                            >
+                                Services
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            <div className="absolute left-0 mt-4 w-56 bg-white rounded-xl shadow-2xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left z-50 border-t-4 border-secondary">
+                                <Link href="/services#flatbed" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary font-bold transition-colors">
+                                    Flatbed Freight
+                                </Link>
+                                <Link href="/services#box-truck" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary font-bold transition-colors">
+                                    Box Truck Freight
+                                </Link>
+                                <Link href="/services#specialized" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary font-bold transition-colors">
+                                    Specialized Transport
+                                </Link>
+                                <Link href="/services#industries" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary font-bold transition-colors">
+                                    Industries Served
+                                </Link>
+                            </div>
+                        </div>
+
                         <Link
-                            href="/services"
+                            href="/#quote"
                             style={{ color: '#ffffff' }}
                             className="!text-white font-semibold text-sm uppercase transition-all hover:opacity-80"
                         >
-                            Services
-                        </Link>
-                        <Link
-                            href="/about"
-                            style={{ color: '#ffffff' }}
-                            className="!text-white font-semibold text-sm uppercase transition-all hover:opacity-80"
-                        >
-                            About Us
+                            Get a Quote
                         </Link>
                         <Link
                             href="/contact"
@@ -62,30 +83,26 @@ export default function Navigation() {
                     </nav>
 
                     {/* Desktop CTA Buttons */}
-                    <div className="desktop-nav items-center space-x-4">
+                    <div className="desktop-nav items-center space-x-3">
                         <Link
-                            href="/portal/carrier"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{
-                                color: '#ffffff',
-                                borderColor: '#ffffff',
-                            }}
-                            className="!text-white px-5 py-2 border-2 rounded-full font-bold transition-all hover:bg-white hover:text-blue-900"
+                            href="/login"
+                            className="!text-white text-sm font-bold hover:text-secondary-light transition-colors"
+                            style={{ color: '#ffffff' }}
                         >
-                            Carrier Portal
+                            Login / Portal
                         </Link>
                         <Link
                             href="/portal/shipper"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{
-                                backgroundColor: '#dc2626',
-                                color: '#ffffff',
-                            }}
-                            className="!text-white px-5 py-2 rounded-full font-bold transition-all hover:bg-red-700 shadow-lg"
+                            className="!text-white px-4 py-2 border border-white/80 rounded-full text-sm font-bold hover:bg-white hover:text-primary transition-all backdrop-blur-sm"
+                            style={{ color: '#ffffff', borderColor: 'rgba(255,255,255,0.8)' }}
                         >
-                            Shipper Portal
+                            Request a Load
+                        </Link>
+                        <Link
+                            href="/portal/carrier"
+                            className="bg-secondary text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-secondary-dark transition-all shadow-lg transform hover:scale-105"
+                        >
+                            Sign Up
                         </Link>
                     </div>
 
@@ -127,21 +144,23 @@ export default function Navigation() {
                         >
                             Home
                         </Link>
+
+                        {/* Mobile Services */}
+                        <div className="space-y-1">
+                            <div className="px-3 py-3 text-base font-bold text-white/70 uppercase text-xs tracking-wider">Services</div>
+                            <Link href="/services#flatbed" onClick={() => setIsOpen(false)} className="block pl-6 pr-3 py-2 text-white font-semibold hover:bg-white/10 rounded-lg">Flatbed Freight</Link>
+                            <Link href="/services#box-truck" onClick={() => setIsOpen(false)} className="block pl-6 pr-3 py-2 text-white font-semibold hover:bg-white/10 rounded-lg">Box Truck Freight</Link>
+                            <Link href="/services#specialized" onClick={() => setIsOpen(false)} className="block pl-6 pr-3 py-2 text-white font-semibold hover:bg-white/10 rounded-lg">Specialized Transport</Link>
+                            <Link href="/services#industries" onClick={() => setIsOpen(false)} className="block pl-6 pr-3 py-2 text-white font-semibold hover:bg-white/10 rounded-lg">Industries Served</Link>
+                        </div>
+
                         <Link
-                            href="/services"
+                            href="/#quote"
                             onClick={() => setIsOpen(false)}
                             style={{ color: '#ffffff' }}
                             className="!text-white block px-3 py-3 text-base font-bold rounded-lg transition-all hover:bg-white/10"
                         >
-                            Services
-                        </Link>
-                        <Link
-                            href="/about"
-                            onClick={() => setIsOpen(false)}
-                            style={{ color: '#ffffff' }}
-                            className="!text-white block px-3 py-3 text-base font-bold rounded-lg transition-all hover:bg-white/10"
-                        >
-                            About Us
+                            Get a Quote
                         </Link>
                         <Link
                             href="/contact"
@@ -151,32 +170,28 @@ export default function Navigation() {
                         >
                             Contact
                         </Link>
-                        <div className="border-t border-white/20 my-2 pt-2 space-y-3">
+
+                        <div className="border-t border-white/20 my-4 pt-4 space-y-3">
                             <Link
-                                href="/portal/carrier"
+                                href="/login"
                                 onClick={() => setIsOpen(false)}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{
-                                    color: '#ffffff',
-                                    borderColor: '#ffffff',
-                                }}
-                                className="!text-white block w-full text-center px-4 py-3 border-2 rounded-lg font-bold transition-all hover:bg-white hover:text-blue-900"
+                                className="!text-white block w-full text-center px-4 py-3 rounded-lg font-bold transition-all hover:bg-white/10 border border-white/30"
                             >
-                                Carrier Portal
+                                Login / Portal
                             </Link>
                             <Link
                                 href="/portal/shipper"
                                 onClick={() => setIsOpen(false)}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{
-                                    backgroundColor: '#dc2626',
-                                    color: '#ffffff',
-                                }}
-                                className="!text-white block w-full text-center px-4 py-3 rounded-lg font-bold transition-all hover:bg-red-700 shadow-lg"
+                                className="!text-white block w-full text-center px-4 py-3 rounded-lg font-bold transition-all bg-white/10 hover:bg-white/20"
                             >
-                                Shipper Portal
+                                Request a Load
+                            </Link>
+                            <Link
+                                href="/portal/carrier"
+                                onClick={() => setIsOpen(false)}
+                                className="!text-white block w-full text-center px-4 py-3 rounded-lg font-bold transition-all bg-secondary hover:bg-secondary-dark shadow-lg"
+                            >
+                                Sign Up
                             </Link>
                         </div>
                     </div>

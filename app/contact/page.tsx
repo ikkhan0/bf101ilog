@@ -52,8 +52,8 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-lg mb-1 text-primary">Email</h3>
-                                    <a href="mailto:EM@ilogbf101.com" className="text-gray-700 hover:text-accent font-semibold">
-                                        EM@ilogbf101.com
+                                    <a href="mailto:Em@bf101ilog.com" className="text-gray-700 hover:text-accent font-semibold">
+                                        Em@bf101ilog.com
                                     </a>
                                     <p className="text-sm text-text-secondary mt-1">Freight Logistic Solutions</p>
                                 </div>

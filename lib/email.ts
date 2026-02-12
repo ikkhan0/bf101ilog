@@ -37,7 +37,7 @@ export async function sendEmail({ to, subject, html }: EmailOptions) {
   try {
     const resend = getResendInstance();
     const data = await resend.emails.send({
-      from: process.env.EMAIL_FROM || 'noreply@lfllogistics.com',
+      from: process.env.EMAIL_FROM || 'noreply@bf101ilog.com',
       to: [to],
       subject,
       html,
@@ -51,7 +51,7 @@ export async function sendEmail({ to, subject, html }: EmailOptions) {
 }
 
 export async function sendCarrierRegistrationEmail(carrierData: any) {
-  const adminEmail = process.env.ADMIN_EMAIL || 'LFLL@LFLLogistics.com';
+  const adminEmail = process.env.ADMIN_EMAIL || 'Em@bf101ilog.com';
 
   const subject = `New Carrier Registration: ${carrierData.legalName}`;
   const html = `
@@ -78,7 +78,7 @@ export async function sendCarrierRegistrationEmail(carrierData: any) {
 }
 
 export async function sendShipperRegistrationEmail(shipperData: any) {
-  const adminEmail = process.env.ADMIN_EMAIL || 'LFLL@LFLLogistics.com';
+  const adminEmail = process.env.ADMIN_EMAIL || 'Em@bf101ilog.com';
 
   const subject = `New Shipper Registration: ${shipperData.legalName}`;
   const html = `
@@ -105,7 +105,7 @@ export async function sendShipperRegistrationEmail(shipperData: any) {
 }
 
 export async function sendProfileUpdateEmail(userType: 'carrier' | 'shipper', userData: any, changes: string[]) {
-  const adminEmail = process.env.ADMIN_EMAIL || 'LFLL@LFLLogistics.com';
+  const adminEmail = process.env.ADMIN_EMAIL || 'Em@bf101ilog.com';
 
   const subject = `${userType === 'carrier' ? 'Carrier' : 'Shipper'} Profile Updated: ${userData.legalName}`;
   const html = `

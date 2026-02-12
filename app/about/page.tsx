@@ -144,8 +144,8 @@ export default function AboutPage() {
                             <a href="tel:3264672949" className="px-8 py-3 bg-primary text-white rounded-full font-bold hover:bg-secondary transition-all">
                                 📞 (326) 467-2949
                             </a>
-                            <a href="mailto:EM@ilogbf101.com" className="px-8 py-3 bg-secondary text-white rounded-full font-bold hover:bg-secondary-dark transition-all">
-                                📧 EM@ilogbf101.com
+                            <a href="mailto:Em@bf101ilog.com" className="px-8 py-3 bg-secondary text-white rounded-full font-bold hover:bg-secondary-dark transition-all">
+                                📧 Em@bf101ilog.com
                             </a>
                         </div>
                     </div>
