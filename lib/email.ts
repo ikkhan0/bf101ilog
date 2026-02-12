@@ -129,3 +129,34 @@ export async function sendProfileUpdateEmail(userType: 'carrier' | 'shipper', us
 
   return await sendEmail({ to: adminEmail, subject, html });
 }
+
+export async function sendQuoteRequestEmail(quoteData: any) {
+  const adminEmail = process.env.ADMIN_EMAIL || 'Em@bf101ilog.com';
+
+  const subject = `New Freight Quote Request from ${quoteData.name}`;
+  const html = `
+    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+      <h2 style="color: #ed1c24;">New Quote Request</h2>
+      <p>You have received a new freight quote request from the website:</p>
+      
+      <div style="background: #f5f7fa; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ed1c24;">
+        <h3 style="margin-top: 0;">Contact Details</h3>
+        <p style="margin: 5px 0;"><strong>Name:</strong> ${quoteData.name}</p>
+        <p style="margin: 5px 0;"><strong>Email:</strong> ${quoteData.email}</p>
+        
+        <h3 style="margin-top: 15px;">Shipment Details</h3>
+        <p style="margin: 5px 0;"><strong>Pickup:</strong> ${quoteData.pickup}</p>
+        <p style="margin: 5px 0;"><strong>Delivery:</strong> ${quoteData.delivery}</p>
+        <p style="margin: 5px 0;"><strong>Freight Type:</strong> ${quoteData.freightType}</p>
+        <p style="margin: 5px 0;"><strong>Preferred Date:</strong> ${quoteData.date}</p>
+        
+        <h3 style="margin-top: 15px;">Additional Info</h3>
+        <p style="margin: 5px 0; white-space: pre-wrap;">${quoteData.details}</p>
+      </div>
+      
+      <p>Please reply to the customer directly at <a href="mailto:${quoteData.email}">${quoteData.email}</a>.</p>
+    </div>
+  `;
+
+  return await sendEmail({ to: adminEmail, subject, html });
+}

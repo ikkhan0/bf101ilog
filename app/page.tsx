@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Navigation from '@/components/Navigation';
 import HeroSlider from '@/components/HeroSlider';
 import Footer from '@/components/Footer';
+import QuoteForm from '@/components/QuoteForm';
 
 export default function HomePage() {
   return (
@@ -38,18 +39,67 @@ export default function HomePage() {
             >
               Get a Quote <span>→</span>
             </Link>
-            <Link
-              href="/track"
-              className="px-12 py-5 bg-white/10 backdrop-blur-md border-2 border-white text-white rounded-full font-bold text-xl hover:bg-white hover:text-primary transition-all shadow-xl hover:scale-105"
-            >
-              Track Shipment
-            </Link>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                href="/portal/carrier"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-5 bg-primary text-white rounded-full font-bold text-lg hover:bg-primary-dark transition-all shadow-xl hover:scale-105 border-2 border-white/20 backdrop-blur-sm"
+              >
+                Carrier Sign Up
+              </Link>
+              <Link
+                href="/portal/shipper"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-5 bg-white text-primary rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-xl hover:scale-105"
+              >
+                Shipper Sign Up
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 2. WHY CHOOSE US (Value Prop) */}
-      <section className="py-24 bg-white">
+      {/* 2. ABOUT US HIGHLIGHT (Restored) */}
+      <section className="py-20 bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-block px-4 py-2 bg-secondary/10 text-secondary rounded-full font-bold text-sm mb-4">
+                ABOUT US
+              </div>
+              <h2 className="text-4xl font-bold text-primary mb-6">Welcome to BullyFashion101 LLC</h2>
+              <p className="text-gray-700 text-lg mb-4 leading-relaxed">
+                BullyFashion101 LLC is a <strong>military-owned</strong> freight brokerage specializing in disciplined,
+                compliance-driven transportation solutions. Founded by <strong>Erv Moore</strong>, we apply military-developed
+                logistics expertise and hazardous materials experience to deliver precision and reliability for shippers who demand excellence.
+              </p>
+              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                We don't just move freight; we execute missions. Whether it's complex flatbed loads or time-critical box truck deliveries, we operate with an unshakeable commitment to integrity and performance.
+              </p>
+              <Link
+                href="/about"
+                className="inline-block px-8 py-3 bg-primary text-white rounded-full font-bold hover:bg-secondary transition-all shadow-lg"
+              >
+                Learn More About Us
+              </Link>
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-2xl border-4 border-secondary transform rotate-1 hover:rotate-0 transition-all duration-500">
+              <Image
+                src="/hero-banner.jpg"
+                alt="BullyFashion101 LLC Freight - Military Owned"
+                width={800}
+                height={600}
+                className="w-full h-[400px] object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. WHY CHOOSE US (Value Prop) */}
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Why Choose Us?</h2>
@@ -62,7 +112,7 @@ export default function HomePage() {
               { icon: "🚀", title: "Real-Time Tracking", desc: "Full visibility from pickup to delivery for peace of mind." },
               { icon: "🤝", title: "Trusted Carriers", desc: "Fully insured and vetted network of professional drivers." }
             ].map((item, i) => (
-              <div key={i} className="text-center p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-2xl transition-all border border-transparent hover:border-gray-100 transform hover:-translate-y-2">
+              <div key={i} className="text-center p-8 rounded-2xl bg-white shadow-lg hover:shadow-2xl transition-all border border-transparent hover:border-gray-100 transform hover:-translate-y-2">
                 <div className="text-6xl mb-6 filter drop-shadow-md">{item.icon}</div>
                 <h3 className="text-2xl font-bold text-primary mb-3">{item.title}</h3>
                 <p className="text-gray-600 leading-relaxed font-medium">{item.desc}</p>
@@ -72,7 +122,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. SERVICES OVERVIEW */}
+      {/* 4. SERVICES OVERVIEW */}
       <section className="py-24 bg-gray-900 text-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/20 transform skew-x-12 translate-x-20"></div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
@@ -96,7 +146,7 @@ export default function HomePage() {
                   <li className="flex items-center text-lg font-medium"><span className="text-secondary mr-3 text-xl">✓</span> Steel, coil & building materials</li>
                   <li className="flex items-center text-lg font-medium"><span className="text-secondary mr-3 text-xl">✓</span> Agricultural equipment</li>
                 </ul>
-                <Link href="/services#flatbed" className="inline-block w-full text-center px-8 py-4 bg-primary text-white rounded-xl font-bold hover:bg-secondary transition-all text-lg shadow-lg">
+                <Link href="/services/flatbed" className="inline-block w-full text-center px-8 py-4 bg-primary text-white rounded-xl font-bold hover:bg-secondary transition-all text-lg shadow-lg">
                   Learn More about Flatbed →
                 </Link>
               </div>
@@ -116,7 +166,7 @@ export default function HomePage() {
                   <li className="flex items-center text-lg font-medium"><span className="text-secondary mr-3 text-xl">✓</span> Time-sensitive expedited shipments</li>
                   <li className="flex items-center text-lg font-medium"><span className="text-secondary mr-3 text-xl">✓</span> Warehouse-to-door pick-up/drop-off</li>
                 </ul>
-                <Link href="/services#box-truck" className="inline-block w-full text-center px-8 py-4 bg-secondary text-white rounded-xl font-bold hover:bg-primary transition-all text-lg shadow-lg">
+                <Link href="/services/box-truck" className="inline-block w-full text-center px-8 py-4 bg-secondary text-white rounded-xl font-bold hover:bg-primary transition-all text-lg shadow-lg">
                   Learn More about Box Trucks →
                 </Link>
               </div>
@@ -125,7 +175,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. HOW IT WORKS */}
+      {/* 5. HOW IT WORKS */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center text-primary mb-20">How It Works</h2>
@@ -153,7 +203,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. INDUSTRIES SERVED */}
+      {/* 6. INDUSTRIES SERVED */}
       <section className="py-20 bg-gradient-to-r from-primary to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">Industries We Serve</h2>
@@ -166,83 +216,28 @@ export default function HomePage() {
               { icon: "🚗", name: "Automotive" },
               { icon: "🎪", name: "Events" }
             ].map((item, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur-md p-6 rounded-2xl text-center hover:bg-white/20 transition-all cursor-default hover:transform hover:-translate-y-1 border border-white/10">
+              <Link key={i} href="/services/industries" className="block bg-white/10 backdrop-blur-md p-6 rounded-2xl text-center hover:bg-white/20 transition-all cursor-pointer hover:transform hover:-translate-y-1 border border-white/10">
                 <div className="text-5xl mb-4">{item.icon}</div>
                 <div className="font-bold text-lg">{item.name}</div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 6. GET A QUOTE (Forms) */}
+      {/* 7. GET A QUOTE (Forms) */}
       <section id="quote" className="py-24 bg-gray-50 relative">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-            <div className="bg-secondary p-8 text-center">
-              <h2 className="text-3xl font-bold text-white mb-2">Get a Free Freight Quote</h2>
-              <p className="text-white/90">Fill out the form below and we'll get back to you within minutes.</p>
-            </div>
-            <div className="p-8 md:p-12">
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-2">Full Name</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all" placeholder="John Doe" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
-                    <input type="email" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all" placeholder="john@company.com" />
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-2">Pickup Location (City, Zip)</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all" placeholder="e.g. Dallas, TX 75201" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-2">Delivery Location (City, Zip)</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all" placeholder="e.g. Chicago, IL 60601" />
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-2">Freight Type</label>
-                    <select className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all">
-                      <option>Flatbed</option>
-                      <option>Box Truck</option>
-                      <option>Van</option>
-                      <option>Other / Specialized</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-2">Preferred Date</label>
-                    <input type="date" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all" />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2">Freight Details (Weight / Dimensions)</label>
-                  <textarea className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all h-24" placeholder="e.g. 40,000 lbs, 48ft flatbed needed..."></textarea>
-                </div>
-
-                <button type="submit" className="w-full py-4 bg-primary text-white font-bold rounded-xl text-lg hover:bg-primary-dark transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                  Submit Quote Request
-                </button>
-              </form>
-            </div>
-          </div>
+          <QuoteForm />
         </div>
       </section>
 
-      {/* 7. TESTIMONIALS */}
+      {/* 8. TESTIMONIALS */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-primary mb-16">Trusted by Companies & Carriers</h2>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               { quote: "Dependable drivers and clear communication — highly recommended!", author: "Sarah J.", role: "Operations Manager", company: "ConstructCo" },
               { quote: "BullyFashion101 helped us move critical flatbed freight when no one else could.", author: "Mike T.", role: "Logistics Director", company: "SteelWorks Inc." },
@@ -257,18 +252,6 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Partner Logos (Dummy) */}
-          <div className="border-t border-gray-100 pt-12">
-            <p className="text-center text-gray-400 font-bold tracking-widest uppercase mb-8">Trusted Partners</p>
-            <div className="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-              {/* Using text placeholders for logos as per prompt "Small logos of partners" */}
-              <div className="text-2xl font-bold text-gray-400 flex items-center gap-2"><span className="text-3xl">🏗️</span> BUILD.CO</div>
-              <div className="text-2xl font-bold text-gray-400 flex items-center gap-2"><span className="text-3xl">⚙️</span> INDU-TECH</div>
-              <div className="text-2xl font-bold text-gray-400 flex items-center gap-2"><span className="text-3xl">🛒</span> RETAIL-X</div>
-              <div className="text-2xl font-bold text-gray-400 flex items-center gap-2"><span className="text-3xl">🥦</span> AGRI-FRESH</div>
-            </div>
           </div>
         </div>
       </section>

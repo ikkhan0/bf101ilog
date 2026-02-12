@@ -51,16 +51,16 @@ export default function Navigation() {
                                 </svg>
                             </button>
                             <div className="absolute left-0 mt-4 w-56 bg-white rounded-xl shadow-2xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left z-50 border-t-4 border-secondary">
-                                <Link href="/services#flatbed" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary font-bold transition-colors">
+                                <Link href="/services/flatbed" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary font-bold transition-colors">
                                     Flatbed Freight
                                 </Link>
-                                <Link href="/services#box-truck" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary font-bold transition-colors">
+                                <Link href="/services/box-truck" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary font-bold transition-colors">
                                     Box Truck Freight
                                 </Link>
-                                <Link href="/services#specialized" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary font-bold transition-colors">
+                                <Link href="/services/specialized" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary font-bold transition-colors">
                                     Specialized Transport
                                 </Link>
-                                <Link href="/services#industries" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary font-bold transition-colors">
+                                <Link href="/services/industries" className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-secondary font-bold transition-colors">
                                     Industries Served
                                 </Link>
                             </div>
@@ -148,10 +148,10 @@ export default function Navigation() {
                         {/* Mobile Services */}
                         <div className="space-y-1">
                             <div className="px-3 py-3 text-base font-bold text-white/70 uppercase text-xs tracking-wider">Services</div>
-                            <Link href="/services#flatbed" onClick={() => setIsOpen(false)} className="block pl-6 pr-3 py-2 text-white font-semibold hover:bg-white/10 rounded-lg">Flatbed Freight</Link>
-                            <Link href="/services#box-truck" onClick={() => setIsOpen(false)} className="block pl-6 pr-3 py-2 text-white font-semibold hover:bg-white/10 rounded-lg">Box Truck Freight</Link>
-                            <Link href="/services#specialized" onClick={() => setIsOpen(false)} className="block pl-6 pr-3 py-2 text-white font-semibold hover:bg-white/10 rounded-lg">Specialized Transport</Link>
-                            <Link href="/services#industries" onClick={() => setIsOpen(false)} className="block pl-6 pr-3 py-2 text-white font-semibold hover:bg-white/10 rounded-lg">Industries Served</Link>
+                            <Link href="/services/flatbed" onClick={() => setIsOpen(false)} className="block pl-6 pr-3 py-2 text-white font-semibold hover:bg-white/10 rounded-lg">Flatbed Freight</Link>
+                            <Link href="/services/box-truck" onClick={() => setIsOpen(false)} className="block pl-6 pr-3 py-2 text-white font-semibold hover:bg-white/10 rounded-lg">Box Truck Freight</Link>
+                            <Link href="/services/specialized" onClick={() => setIsOpen(false)} className="block pl-6 pr-3 py-2 text-white font-semibold hover:bg-white/10 rounded-lg">Specialized Transport</Link>
+                            <Link href="/services/industries" onClick={() => setIsOpen(false)} className="block pl-6 pr-3 py-2 text-white font-semibold hover:bg-white/10 rounded-lg">Industries Served</Link>
                         </div>
 
                         <Link
