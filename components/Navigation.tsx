@@ -38,13 +38,6 @@ export default function Navigation() {
                         >
                             Home
                         </Link>
-                        <Link
-                            href="/about"
-                            style={{ color: '#ffffff' }}
-                            className="!text-white font-semibold text-sm uppercase transition-all hover:opacity-80"
-                        >
-                            About
-                        </Link>
 
                         {/* Services Dropdown */}
                         <div className="relative group">
@@ -150,14 +143,6 @@ export default function Navigation() {
                             className="!text-white block px-3 py-3 text-base font-bold rounded-lg transition-all hover:bg-white/10"
                         >
                             Home
-                        </Link>
-                        <Link
-                            href="/about"
-                            onClick={() => setIsOpen(false)}
-                            style={{ color: '#ffffff' }}
-                            className="!text-white block px-3 py-3 text-base font-bold rounded-lg transition-all hover:bg-white/10"
-                        >
-                            About
                         </Link>
 
                         {/* Mobile Services */}
