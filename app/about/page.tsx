@@ -15,7 +15,7 @@ export default function AboutPage() {
                         🎖️ MILITARY OWNED
                     </div>
                     <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">About BullyFashion101 LLC</h1>
-                    <p className="text-2xl text-text-secondary max-w-3xl mx-auto">
+                    <p className="text-xl md:text-2xl text-text-secondary max-w-5xl mx-auto md:whitespace-nowrap">
                         Military-Owned Freight Brokerage | Disciplined Excellence in Logistics
                     </p>
                 </div>
