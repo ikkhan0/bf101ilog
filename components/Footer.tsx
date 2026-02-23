@@ -32,6 +32,7 @@ export default function Footer() {
 
                     <div>
                         <h3 className="text-xl font-bold mb-4 text-secondary">Contact Info</h3>
+                        <p className="text-sm text-red-400 font-semibold mb-3">For Emergency</p>
                         <ul className="space-y-2 text-gray-300">
 
                             <li>📞 (326) 467-2949</li>
