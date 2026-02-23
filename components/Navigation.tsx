@@ -107,7 +107,7 @@ export default function Navigation() {
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <div className="mobile-menu-btn flex items-center">
+                    <div className="mobile-menu-btn flex md:hidden items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             style={{ color: '#ffffff' }}

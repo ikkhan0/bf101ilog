@@ -23,16 +23,7 @@ export default function ContactPage() {
                     <div>
                         <h2 className="text-3xl font-bold mb-8 text-primary">Get in Touch</h2>
                         <div className="space-y-6">
-                            <div className="flex items-start space-x-4 bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary">
-                                <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <span className="text-2xl">👤</span>
-                                </div>
-                                <div>
-                                    <h3 className="font-bold text-lg mb-1 text-primary">Founder</h3>
-                                    <p className="text-gray-700 font-semibold">Erv Moore</p>
-                                    <p className="text-sm text-text-secondary">Operator</p>
-                                </div>
-                            </div>
+
 
                             <div className="flex items-start space-x-4 bg-white p-6 rounded-xl shadow-lg border-l-4 border-secondary">
                                 <div className="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center flex-shrink-0">

@@ -33,7 +33,7 @@ export default function Footer() {
                     <div>
                         <h3 className="text-xl font-bold mb-4 text-secondary">Contact Info</h3>
                         <ul className="space-y-2 text-gray-300">
-                            <li className="font-semibold text-white">Erv Moore, Owner</li>
+
                             <li>📞 (326) 467-2949</li>
                             <li>📧 Em@bf101ilog.com</li>
                             <li className="mt-4 pt-4 border-t border-white/20">

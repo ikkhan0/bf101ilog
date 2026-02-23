@@ -120,36 +120,7 @@ export default function AboutPage() {
                     </div>
                 </div>
 
-                {/* Leadership Section */}
-                <div className="bg-white p-10 md:p-12 rounded-2xl shadow-xl mb-16">
-                    <div className="text-center mb-8">
-                        <h2 className="text-4xl font-bold mb-4 text-primary">Leadership</h2>
-                        <div className="w-20 h-1 bg-secondary mx-auto mb-8"></div>
-                    </div>
 
-                    <div className="max-w-3xl mx-auto text-center">
-                        <div className="mb-6">
-                            <h3 className="text-3xl font-bold text-primary mb-2">Erv Moore</h3>
-                            <p className="text-xl text-secondary font-semibold mb-4">Founder</p>
-                            <div className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full font-bold text-sm mb-6">
-                                🎖️ MILITARY OWNED
-                            </div>
-                        </div>
-                        <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                            With extensive military experience and specialized logistics training, Erv founded BullyFashion101 LLC
-                            to bring military-grade discipline and compliance to civilian freight logistics. His background in operational planning
-                            and risk management ensures every shipment is handled with precision and care.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="tel:3264672949" className="px-8 py-3 bg-primary text-white rounded-full font-bold hover:bg-secondary transition-all">
-                                📞 (326) 467-2949
-                            </a>
-                            <a href="mailto:Em@bf101ilog.com" className="px-8 py-3 bg-secondary text-white rounded-full font-bold hover:bg-secondary-dark transition-all">
-                                📧 Em@bf101ilog.com
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
                 {/* Coverage Area */}
                 <div className="bg-gradient-to-br from-bg-light to-white p-10 md:p-12 rounded-2xl border-2 border-border-light mb-16">
