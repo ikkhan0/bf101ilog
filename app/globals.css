@@ -88,7 +88,7 @@
       display: flex;
     }
     .mobile-menu-btn {
-      display: none;
+      display: none !important;
     }
   }
 }
